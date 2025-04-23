@@ -1,13 +1,13 @@
 //
-//  AirborneUITestsLaunchTests.swift
-//  AirborneUITests
+//  FlipTrickUITestsLaunchTests.swift
+//  FlipTrickUITests
 //
 //  Created by Daniel Mamuza on 4/22/25.
 //
 
 import XCTest
 
-final class AirborneUITestsLaunchTests: XCTestCase {
+final class FlipTrickUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

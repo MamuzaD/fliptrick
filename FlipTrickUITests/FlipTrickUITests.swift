@@ -1,13 +1,13 @@
 //
-//  AirborneUITests.swift
-//  AirborneUITests
+//  FlipTrickUITests.swift
+//  FlipTrickUITests
 //
 //  Created by Daniel Mamuza on 4/22/25.
 //
 
 import XCTest
 
-final class AirborneUITests: XCTestCase {
+final class FlipTrickUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

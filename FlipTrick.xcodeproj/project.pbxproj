@@ -24,18 +24,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65CBFDBD2DB8B3570096197A /* Airborne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airborne.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		65CBFDD32DB8B3580096197A /* AirborneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirborneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65CBFDDD2DB8B3580096197A /* AirborneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirborneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CBFDBD2DB8B3570096197A /* FlipTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CBFDD32DB8B3580096197A /* FlipTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CBFDDD2DB8B3580096197A /* FlipTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		65CBFDE52DB8B3580096197A /* Exceptions for "Airborne" folder in "Airborne" target */ = {
+		65CBFDE52DB8B3580096197A /* Exceptions for "Airborne" folder in "FlipTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 65CBFDBC2DB8B3570096197A /* Airborne */;
+			target = 65CBFDBC2DB8B3570096197A /* FlipTest */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -43,7 +43,7 @@
 		65CBFDBF2DB8B3570096197A /* Airborne */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				65CBFDE52DB8B3580096197A /* Exceptions for "Airborne" folder in "Airborne" target */,
+				65CBFDE52DB8B3580096197A /* Exceptions for "Airborne" folder in "FlipTest" target */,
 			);
 			path = Airborne;
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 		65CBFDBE2DB8B3570096197A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65CBFDBD2DB8B3570096197A /* Airborne.app */,
-				65CBFDD32DB8B3580096197A /* AirborneTests.xctest */,
-				65CBFDDD2DB8B3580096197A /* AirborneUITests.xctest */,
+				65CBFDBD2DB8B3570096197A /* FlipTest.app */,
+				65CBFDD32DB8B3580096197A /* FlipTestTests.xctest */,
+				65CBFDDD2DB8B3580096197A /* FlipTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65CBFDBC2DB8B3570096197A /* Airborne */ = {
+		65CBFDBC2DB8B3570096197A /* FlipTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "Airborne" */;
+			buildConfigurationList = 65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTest" */;
 			buildPhases = (
 				65CBFDB92DB8B3570096197A /* Sources */,
 				65CBFDBA2DB8B3570096197A /* Frameworks */,
@@ -123,16 +123,16 @@
 			fileSystemSynchronizedGroups = (
 				65CBFDBF2DB8B3570096197A /* Airborne */,
 			);
-			name = Airborne;
+			name = FlipTest;
 			packageProductDependencies = (
 			);
 			productName = Airborne;
-			productReference = 65CBFDBD2DB8B3570096197A /* Airborne.app */;
+			productReference = 65CBFDBD2DB8B3570096197A /* FlipTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		65CBFDD22DB8B3580096197A /* AirborneTests */ = {
+		65CBFDD22DB8B3580096197A /* FlipTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "AirborneTests" */;
+			buildConfigurationList = 65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestTests" */;
 			buildPhases = (
 				65CBFDCF2DB8B3580096197A /* Sources */,
 				65CBFDD02DB8B3580096197A /* Frameworks */,
@@ -146,16 +146,16 @@
 			fileSystemSynchronizedGroups = (
 				65CBFDD62DB8B3580096197A /* AirborneTests */,
 			);
-			name = AirborneTests;
+			name = FlipTestTests;
 			packageProductDependencies = (
 			);
 			productName = AirborneTests;
-			productReference = 65CBFDD32DB8B3580096197A /* AirborneTests.xctest */;
+			productReference = 65CBFDD32DB8B3580096197A /* FlipTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		65CBFDDC2DB8B3580096197A /* AirborneUITests */ = {
+		65CBFDDC2DB8B3580096197A /* FlipTestUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "AirborneUITests" */;
+			buildConfigurationList = 65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestUITests" */;
 			buildPhases = (
 				65CBFDD92DB8B3580096197A /* Sources */,
 				65CBFDDA2DB8B3580096197A /* Frameworks */,
@@ -169,11 +169,11 @@
 			fileSystemSynchronizedGroups = (
 				65CBFDE02DB8B3580096197A /* AirborneUITests */,
 			);
-			name = AirborneUITests;
+			name = FlipTestUITests;
 			packageProductDependencies = (
 			);
 			productName = AirborneUITests;
-			productReference = 65CBFDDD2DB8B3580096197A /* AirborneUITests.xctest */;
+			productReference = 65CBFDDD2DB8B3580096197A /* FlipTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "Airborne" */;
+			buildConfigurationList = 65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "FlipTest" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -213,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65CBFDBC2DB8B3570096197A /* Airborne */,
-				65CBFDD22DB8B3580096197A /* AirborneTests */,
-				65CBFDDC2DB8B3580096197A /* AirborneUITests */,
+				65CBFDBC2DB8B3570096197A /* FlipTest */,
+				65CBFDD22DB8B3580096197A /* FlipTestTests */,
+				65CBFDDC2DB8B3580096197A /* FlipTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		65CBFDD52DB8B3580096197A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65CBFDBC2DB8B3570096197A /* Airborne */;
+			target = 65CBFDBC2DB8B3570096197A /* FlipTest */;
 			targetProxy = 65CBFDD42DB8B3580096197A /* PBXContainerItemProxy */;
 		};
 		65CBFDDF2DB8B3580096197A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65CBFDBC2DB8B3570096197A /* Airborne */;
+			target = 65CBFDBC2DB8B3570096197A /* FlipTest */;
 			targetProxy = 65CBFDDE2DB8B3580096197A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "Airborne" */ = {
+		65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "FlipTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDE92DB8B3580096197A /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "Airborne" */ = {
+		65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDE72DB8B3580096197A /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "AirborneTests" */ = {
+		65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDEC2DB8B3580096197A /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "AirborneUITests" */ = {
+		65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDEF2DB8B3580096197A /* Debug */,
