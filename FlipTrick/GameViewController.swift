@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Airborne
+//  FlipTrick
 //
 //  Created by Daniel Mamuza on 4/22/25.
 //
@@ -8,7 +8,13 @@
 import UIKit
 import CoreMotion
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+struct Move {
+    var move: String
+    var points: Int
+    var multiplier: Double
+}
+
+class GameViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     // MARK: - View Controller
     
@@ -22,12 +28,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var currentMultiplierLabel: UILabel!
     @IBOutlet weak var movesTable: UITableView!
+    @IBOutlet weak var decayLabel: UILabel!
     
     // Each move: (move name, points, multiplier)
-    var moveHistory: [(move: String, points: Int, multiplier: Double)] = []
+    var moveHistory: [Move] = []
     
     func updateMultiplierLabel() {
         currentMultiplierLabel.text = "x\(String(format: "%.1f", multiplier))"
+        if multiplier > 3 {
+            currentMultiplierLabel.textColor = .systemRed
+        } else if multiplier > 2 {
+            currentMultiplierLabel.textColor = .systemOrange
+        } else if multiplier > 1 {
+            currentMultiplierLabel.textColor = .systemYellow
+        } else {
+            currentMultiplierLabel.textColor = .label
+        }
     }
     
     override func viewDidLoad() {
@@ -46,17 +62,42 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func menuButtonTapped(_ sender: Any) {
         decayTimer?.invalidate()
+        countdownTimer?.invalidate()
         let alert = UIAlertController(
             title: "Paused",
             message: "Want to save your game and restart?",
-            preferredStyle: .alert
+            preferredStyle: .actionSheet
         )
+        // save || restart
         alert.addAction(UIAlertAction(title: "Save & Restart", style: .default, handler: { _ in
             GameManager.shared.saveGame(score: self.score
             )
             self.startGame()
         }))
+        // more info
+        alert.addAction(UIAlertAction(title: "More Info", style: .default, handler: { [weak self] _ in
+            guard let self = self else { return }
+            let infoAlert = UIAlertController(
+                title: "About FlipTrick",
+                message:
+                    """
+                    
+                    - Earn points by flipping, spinning, or rotating your phone in different ways.
+                    
+                    - Chain unique tricks together to build combos and boost your multiplier.
+                    
+                    - Stay active—if you pause for too long, your score will start to decay!
+                    
+                    How high can you score before time and gravity catch up?
+                    """,
+                preferredStyle: .alert
+            )
+            infoAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(infoAlert, animated: true, completion: nil)
+        }))
+        // cancel
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
         present(alert, animated: true, completion: nil)
     }
     
@@ -74,6 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         scoreLabel.text = "0"
         movesTable.reloadData()
         updateMultiplierLabel()
+        decayLabel.text = ""
         
         // gyro
         startGyroUpdates()
@@ -81,6 +123,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // decay
         decayTimer?.invalidate()
         decayStartTime = nil
+        countdownTimer?.invalidate()
     }
     
     
@@ -152,23 +195,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var comboTimer: Timer?
     let comboTimeout: TimeInterval = 3.0
     
-    
-    
     func registerMove(_ move: String, points: Int) {
         print("Move detected: \(move)")
-        
         let earned = Int(Double(points) * multiplier)
         score += earned
-        moveHistory.insert((move, earned, multiplier), at: 0)
-        lastMove = move
+        moveHistory.insert(Move(move: move, points: earned, multiplier: multiplier), at: 0)
         
-        // Track repeat streak
+        // @TODO: refactor combo/multiplier logic
         if move == lastMove {
             repeatStreak += 1
         } else {
             repeatStreak = 1
         }
-        
+        lastMove = move
         if repeatStreak > 3 {
             multiplier = 1.0
         } else {
@@ -200,19 +239,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         resetDecayTimer()
     }
     
+    // MARK: - Decay logic
     
-    // decay variable
     var decayTimer: Timer?
     var decayStartTime: Date?
     let decayDelay: TimeInterval = 5.0
     let decayInterval: TimeInterval = 0.3
     
+    var countdownTimer: Timer?
+    let countdownStartDelay: TimeInterval = 2.0
+    let countdownSeconds: Int = 3
+    var countdownRemaining: Int = 0
+    
     func resetDecayTimer() {
         decayTimer?.invalidate()
+        countdownTimer?.invalidate()
         decayStartTime = nil
-        // start new timer to begin decay after delay
-        Timer.scheduledTimer(withTimeInterval: decayDelay, repeats: false) { [weak self] _ in
-            self?.startDecay()
+        decayLabel.text = ""
+        
+        decayTimer = Timer.scheduledTimer(withTimeInterval: countdownStartDelay, repeats: false) { [weak self] _ in
+            self?.startCountdown()
+        }
+    }
+    
+    func startCountdown() {
+        countdownRemaining = countdownSeconds
+        decayLabel.text = "\(countdownRemaining)"
+        countdownTimer?.invalidate()
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+            guard let self = self else { return }
+            self.countdownRemaining -= 1
+            if self.countdownRemaining > 0 {
+                self.decayLabel.text = "\(self.countdownRemaining)"
+            } else {
+                timer.invalidate()
+                self.decayLabel.text = "decaying..."
+                self.startDecay()
+            }
         }
     }
     
@@ -227,15 +290,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func applyDecay() {
         guard let start = decayStartTime else { return }
         let t = Date().timeIntervalSince(start)
-        let decay = Int(3 * log(t + 1)) // @TODO: could still tune
+        let decay = Int(3 * log(t + 1))
         if score > 0 {
             score = max(0, score - decay)
             scoreLabel.text = "\(score)"
-        }
-        else {
+        } else {
             decayTimer?.invalidate()
+            decayLabel.text = ""
         }
     }
+    
     
     // MARK: - UITableViewDataSource
     
@@ -249,6 +313,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.moveLabel.text = move.move
         cell.pointsLabel.text = "+\(move.points)"
         cell.multiplierLabel.text = "x\(String(format: "%.1f", move.multiplier))"
+        
+        // diff colors based on multiplier
+        if move.multiplier > 3 {
+            cell.multiplierLabel.textColor = .systemRed
+        } else if move.multiplier > 2 {
+            cell.multiplierLabel.textColor = .systemOrange
+        } else if move.multiplier > 1 {
+            cell.multiplierLabel.textColor = .systemYellow
+        } else {
+            cell.multiplierLabel.textColor = .label
+        }
         
         // gradient
         let total = max(moveHistory.count - 1, 1)

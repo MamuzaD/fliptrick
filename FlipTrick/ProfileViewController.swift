@@ -1,6 +1,6 @@
 //
 //  ProfileViewController.swift
-//  Airborne
+//  FlipTrick
 //
 //  Created by Daniel Mamuza on 4/23/25.
 //

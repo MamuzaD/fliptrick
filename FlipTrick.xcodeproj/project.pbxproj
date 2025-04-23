@@ -24,38 +24,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65CBFDBD2DB8B3570096197A /* FlipTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		65CBFDD32DB8B3580096197A /* FlipTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65CBFDDD2DB8B3580096197A /* FlipTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CBFDBD2DB8B3570096197A /* FlipTrick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipTrick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CBFDD32DB8B3580096197A /* FlipTrickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipTrickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CBFDDD2DB8B3580096197A /* FlipTrickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipTrickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		65CBFDE52DB8B3580096197A /* Exceptions for "Airborne" folder in "FlipTest" target */ = {
+		65CBFDE52DB8B3580096197A /* Exceptions for "FlipTrick" folder in "FlipTrick" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 65CBFDBC2DB8B3570096197A /* FlipTest */;
+			target = 65CBFDBC2DB8B3570096197A /* FlipTrick */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		65CBFDBF2DB8B3570096197A /* Airborne */ = {
+		65CBFDBF2DB8B3570096197A /* FlipTrick */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				65CBFDE52DB8B3580096197A /* Exceptions for "Airborne" folder in "FlipTest" target */,
+				65CBFDE52DB8B3580096197A /* Exceptions for "FlipTrick" folder in "FlipTrick" target */,
 			);
-			path = Airborne;
+			path = FlipTrick;
 			sourceTree = "<group>";
 		};
-		65CBFDD62DB8B3580096197A /* AirborneTests */ = {
+		65CBFDD62DB8B3580096197A /* FlipTrickTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AirborneTests;
+			path = FlipTrickTests;
 			sourceTree = "<group>";
 		};
-		65CBFDE02DB8B3580096197A /* AirborneUITests */ = {
+		65CBFDE02DB8B3580096197A /* FlipTrickUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AirborneUITests;
+			path = FlipTrickUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -88,9 +88,9 @@
 		65CBFDB42DB8B3570096197A = {
 			isa = PBXGroup;
 			children = (
-				65CBFDBF2DB8B3570096197A /* Airborne */,
-				65CBFDD62DB8B3580096197A /* AirborneTests */,
-				65CBFDE02DB8B3580096197A /* AirborneUITests */,
+				65CBFDBF2DB8B3570096197A /* FlipTrick */,
+				65CBFDD62DB8B3580096197A /* FlipTrickTests */,
+				65CBFDE02DB8B3580096197A /* FlipTrickUITests */,
 				65CBFDBE2DB8B3570096197A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 		65CBFDBE2DB8B3570096197A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65CBFDBD2DB8B3570096197A /* FlipTest.app */,
-				65CBFDD32DB8B3580096197A /* FlipTestTests.xctest */,
-				65CBFDDD2DB8B3580096197A /* FlipTestUITests.xctest */,
+				65CBFDBD2DB8B3570096197A /* FlipTrick.app */,
+				65CBFDD32DB8B3580096197A /* FlipTrickTests.xctest */,
+				65CBFDDD2DB8B3580096197A /* FlipTrickUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65CBFDBC2DB8B3570096197A /* FlipTest */ = {
+		65CBFDBC2DB8B3570096197A /* FlipTrick */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTest" */;
+			buildConfigurationList = 65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTrick" */;
 			buildPhases = (
 				65CBFDB92DB8B3570096197A /* Sources */,
 				65CBFDBA2DB8B3570096197A /* Frameworks */,
@@ -121,18 +121,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				65CBFDBF2DB8B3570096197A /* Airborne */,
+				65CBFDBF2DB8B3570096197A /* FlipTrick */,
 			);
-			name = FlipTest;
+			name = FlipTrick;
 			packageProductDependencies = (
 			);
 			productName = Airborne;
-			productReference = 65CBFDBD2DB8B3570096197A /* FlipTest.app */;
+			productReference = 65CBFDBD2DB8B3570096197A /* FlipTrick.app */;
 			productType = "com.apple.product-type.application";
 		};
-		65CBFDD22DB8B3580096197A /* FlipTestTests */ = {
+		65CBFDD22DB8B3580096197A /* FlipTrickTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestTests" */;
+			buildConfigurationList = 65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTrickTests" */;
 			buildPhases = (
 				65CBFDCF2DB8B3580096197A /* Sources */,
 				65CBFDD02DB8B3580096197A /* Frameworks */,
@@ -144,18 +144,18 @@
 				65CBFDD52DB8B3580096197A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				65CBFDD62DB8B3580096197A /* AirborneTests */,
+				65CBFDD62DB8B3580096197A /* FlipTrickTests */,
 			);
-			name = FlipTestTests;
+			name = FlipTrickTests;
 			packageProductDependencies = (
 			);
 			productName = AirborneTests;
-			productReference = 65CBFDD32DB8B3580096197A /* FlipTestTests.xctest */;
+			productReference = 65CBFDD32DB8B3580096197A /* FlipTrickTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		65CBFDDC2DB8B3580096197A /* FlipTestUITests */ = {
+		65CBFDDC2DB8B3580096197A /* FlipTrickUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestUITests" */;
+			buildConfigurationList = 65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTrickUITests" */;
 			buildPhases = (
 				65CBFDD92DB8B3580096197A /* Sources */,
 				65CBFDDA2DB8B3580096197A /* Frameworks */,
@@ -167,13 +167,13 @@
 				65CBFDDF2DB8B3580096197A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				65CBFDE02DB8B3580096197A /* AirborneUITests */,
+				65CBFDE02DB8B3580096197A /* FlipTrickUITests */,
 			);
-			name = FlipTestUITests;
+			name = FlipTrickUITests;
 			packageProductDependencies = (
 			);
 			productName = AirborneUITests;
-			productReference = 65CBFDDD2DB8B3580096197A /* FlipTestUITests.xctest */;
+			productReference = 65CBFDDD2DB8B3580096197A /* FlipTrickUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "FlipTest" */;
+			buildConfigurationList = 65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "FlipTrick" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -213,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65CBFDBC2DB8B3570096197A /* FlipTest */,
-				65CBFDD22DB8B3580096197A /* FlipTestTests */,
-				65CBFDDC2DB8B3580096197A /* FlipTestUITests */,
+				65CBFDBC2DB8B3570096197A /* FlipTrick */,
+				65CBFDD22DB8B3580096197A /* FlipTrickTests */,
+				65CBFDDC2DB8B3580096197A /* FlipTrickUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		65CBFDD52DB8B3580096197A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65CBFDBC2DB8B3570096197A /* FlipTest */;
+			target = 65CBFDBC2DB8B3570096197A /* FlipTrick */;
 			targetProxy = 65CBFDD42DB8B3580096197A /* PBXContainerItemProxy */;
 		};
 		65CBFDDF2DB8B3580096197A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 65CBFDBC2DB8B3570096197A /* FlipTest */;
+			target = 65CBFDBC2DB8B3570096197A /* FlipTrick */;
 			targetProxy = 65CBFDDE2DB8B3580096197A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -291,7 +291,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S5Z8P7W48A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Airborne/Info.plist;
+				INFOPLIST_FILE = FlipTrick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,7 +302,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = daniel.Airborne;
+				PRODUCT_BUNDLE_IDENTIFIER = daniel.FlipTrick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -319,7 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S5Z8P7W48A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Airborne/Info.plist;
+				INFOPLIST_FILE = FlipTrick/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = daniel.Airborne;
+				PRODUCT_BUNDLE_IDENTIFIER = daniel.FlipTrick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "FlipTest" */ = {
+		65CBFDB82DB8B3570096197A /* Build configuration list for PBXProject "FlipTrick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDE92DB8B3580096197A /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTest" */ = {
+		65CBFDE62DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTrick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDE72DB8B3580096197A /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestTests" */ = {
+		65CBFDEB2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTrickTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDEC2DB8B3580096197A /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTestUITests" */ = {
+		65CBFDEE2DB8B3580096197A /* Build configuration list for PBXNativeTarget "FlipTrickUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65CBFDEF2DB8B3580096197A /* Debug */,
