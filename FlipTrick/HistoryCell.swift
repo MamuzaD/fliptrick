@@ -14,9 +14,9 @@ class HistoryCell: UITableViewCell {
         // Initialization code
     }
 
-    @IBOutlet weak var scoreLabel: UILabel!
+   
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var modeLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
-    
-
 }

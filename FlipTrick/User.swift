@@ -11,6 +11,7 @@ import Foundation
 struct SavedGame: Codable {
     let score: Int
     let date: Date
+    let mode: String
 }
 
 class GameManager {
@@ -19,9 +20,9 @@ class GameManager {
 
     private init() {}
 
-    func saveGame(score: Int) {
+    func saveGame(score: Int, gameMode: String) {
         var savedGames = loadSavedGames()
-        let savedGame = SavedGame(score: score, date: Date())
+        let savedGame = SavedGame(score: score, date: Date(), mode: gameMode)
         savedGames.insert(savedGame, at: 0)
         if let data = try? JSONEncoder().encode(savedGames) {
             UserDefaults.standard.set(data, forKey: savedGamesKey)

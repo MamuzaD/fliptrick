@@ -48,6 +48,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
         cell.dateLabel.text = formatter.string(from: game.date)
+        
+        cell.modeLabel.text = game.mode
 
         return cell
     }
