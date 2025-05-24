@@ -48,16 +48,6 @@
 			path = FlipTrick;
 			sourceTree = "<group>";
 		};
-		65CBFDD62DB8B3580096197A /* FlipTrickTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FlipTrickTests;
-			sourceTree = "<group>";
-		};
-		65CBFDE02DB8B3580096197A /* FlipTrickUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FlipTrickUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				65CBFDBF2DB8B3570096197A /* FlipTrick */,
-				65CBFDD62DB8B3580096197A /* FlipTrickTests */,
-				65CBFDE02DB8B3580096197A /* FlipTrickUITests */,
 				65CBFDBE2DB8B3570096197A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				65CBFDD52DB8B3580096197A /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				65CBFDD62DB8B3580096197A /* FlipTrickTests */,
-			);
 			name = FlipTrickTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				65CBFDDF2DB8B3580096197A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				65CBFDE02DB8B3580096197A /* FlipTrickUITests */,
 			);
 			name = FlipTrickUITests;
 			packageProductDependencies = (
